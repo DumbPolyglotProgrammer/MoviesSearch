@@ -30,4 +30,10 @@ Speaking of react, `create-react-app` is an utility to bootstrap a react project
 
 ---
 
+What is this `.expo-shared` directory?
+<br>
+https://blog.expo.io/image-compression-with-expo-cli-d32d15cc8b73
+
+---
+
 ...
