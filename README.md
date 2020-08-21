@@ -65,4 +65,10 @@ Links on React Navigation getting started.
 
 ---
 
+Expo Vector Icons Directory
+<br>
+https://icons.expo.fyi
+
+---
+
 ...
