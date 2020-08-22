@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   },
   iconStyle: {
     fontSize: 24,
+    color: '#212121',
   },
   inputStyle: {
     fontSize: 18,
