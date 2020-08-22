@@ -71,4 +71,26 @@ https://icons.expo.fyi
 
 ---
 
+Making Network Requests
+
+`fetch`
+
+- Built in function for making network requests
+- Error handling is a bit weird
+- Requires us to write a lot of wrapper code to make it work 'sensibly'
+
+`axios`
+
+- Separate library for making requests
+- Easy to use, sensible defaults
+- Increases our app size (very slightly)
+
+---
+
+How to safely store sensitive information in environment variables
+<br>
+https://github.com/goatandsheep/react-native-dotenv
+
+---
+
 ...
