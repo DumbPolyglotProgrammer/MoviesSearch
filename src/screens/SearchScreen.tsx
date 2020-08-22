@@ -1,24 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import tmdb from '../api/tmdb';
 
-import { Button } from 'react-native';
-
 const SearchScreen = () => {
+  const [query, setQuery] = useState('');
+
   return (
     <View>
-      <SearchBar />
-      <Text>SearchScreen</Text>
-      <Button
-        title='API Call'
-        onPress={() =>
-          tmdb
-            .get('/search/movie', { params: { query: 'spider' } })
-            .then((response) => console.log(response))
-            .catch((error) => console.log(error))
-        }
-      />
+      <SearchBar onChangeText={(text) => setQuery(text)} text={query} />
+      <Text>{`SearchScreen: ${query}`}</Text>
     </View>
   );
 };
