@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
+import SearchResult from './SearchResult';
 
 interface SearchResultsListProps {
   title: string;
@@ -14,7 +15,7 @@ const SearchResultsList = (props: SearchResultsListProps) => {
         data={props.results}
         keyExtractor={(result) => `${result.id}`}
         renderItem={({ item }) => {
-          return <Text>{item.title || item.name}</Text>;
+          return <SearchResult result={item} />;
         }}
         horizontal
       />
