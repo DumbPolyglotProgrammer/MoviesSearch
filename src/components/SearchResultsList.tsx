@@ -1,16 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 interface SearchResultsListProps {
   title: string;
-  results: [];
+  results: any[];
 }
 
 const SearchResultsList = (props: SearchResultsListProps) => {
   return (
     <View>
       <Text style={styles.titleStyle}>{props.title}</Text>
-      <Text>Results: {props.results.length}</Text>
+      <FlatList
+        data={props.results}
+        keyExtractor={(result) => `${result.id}`}
+        renderItem={({ item }) => {
+          return <Text>{item.title || item.name}</Text>;
+        }}
+        horizontal
+      />
     </View>
   );
 };
