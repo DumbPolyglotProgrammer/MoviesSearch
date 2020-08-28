@@ -5,6 +5,7 @@ import { FontAwesome } from '@expo/vector-icons';
 interface SearchBarProps {
   onChangeText: (text: string) => void;
   text: string;
+  onEndEditing: () => void;
 }
 
 const SearchBar = (props: SearchBarProps) => {
@@ -16,6 +17,7 @@ const SearchBar = (props: SearchBarProps) => {
         style={styles.inputStyle}
         onChangeText={(text) => props.onChangeText(text)}
         value={props.text}
+        onEndEditing={() => props.onEndEditing()}
       />
     </View>
   );

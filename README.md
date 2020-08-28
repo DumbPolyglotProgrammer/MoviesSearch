@@ -93,4 +93,30 @@ https://github.com/goatandsheep/react-native-dotenv
 
 ---
 
-...
+`useEffect`
+
+https://reactjs.org/docs/hooks-reference.html#useeffect
+
+<br>
+
+```
+useEffect(() => {})
+```
+
+Run the function every time the component is rendered.
+
+<br>
+
+```
+useEffect(() => {}. [])
+```
+
+Run the function only when the component is first rendered.
+
+<br>
+
+```
+useEffect(() => {}. [value])
+```
+
+Run the function only when the component is first rendered, and when the 'value' changes.
