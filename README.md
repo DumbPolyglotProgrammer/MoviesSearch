@@ -120,3 +120,5 @@ useEffect(() => {}. [value])
 ```
 
 Run the function only when the component is first rendered, and when the 'value' changes.
+
+---
