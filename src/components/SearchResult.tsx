@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   imageStyle: {
-    width: 250,
-    height: 120,
+    width: 320,
+    height: 180,
     borderRadius: 4,
-    marginBottom: 5,
+    marginBottom: 4,
   },
   titleStyle: {
     fontWeight: 'bold',

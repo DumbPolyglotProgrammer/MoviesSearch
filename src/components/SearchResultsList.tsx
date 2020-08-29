@@ -9,7 +9,7 @@ interface SearchResultsListProps {
 
 const SearchResultsList = (props: SearchResultsListProps) => {
   return (
-    <View>
+    <View style={styles.containerStyle}>
       <Text style={styles.titleStyle}>{props.title}</Text>
       <FlatList
         data={props.results}
@@ -18,30 +18,22 @@ const SearchResultsList = (props: SearchResultsListProps) => {
           return <SearchResult result={item} />;
         }}
         horizontal
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  //   backgroundStyle: {
-  //     backgroundColor: 'white',
-  //     margin: 16,
-  //     paddingVertical: 8,
-  //     paddingHorizontal: 16,
-  //     borderRadius: 4,
-  //     flexDirection: 'row',
-  //     alignItems: 'center',
-  //   },
+  containerStyle: {
+    marginBottom: 16,
+  },
   titleStyle: {
     fontSize: 18,
     fontWeight: 'bold',
+    marginStart: 16,
+    marginBottom: 4,
   },
-  //   inputStyle: {
-  //     fontSize: 18,
-  //     marginStart: 16,
-  //     flex: 1,
-  //   },
 });
 
 export default SearchResultsList;
