@@ -26,6 +26,7 @@ const DetailsScreen = ({ navigation }) => {
 
   return (
     <>
+      <Text>{details.title}</Text>
       <Text>{details.tagline}</Text>
     </>
   );
