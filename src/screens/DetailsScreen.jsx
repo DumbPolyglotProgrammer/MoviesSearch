@@ -1,16 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Text, StyleSheet } from 'react-native';
-import SearchBar from '../components/SearchBar';
-import SearchResultsList from '../components/SearchResultsList';
-import useSearchResults from '../hooks/useSearchResults';
+import { Text, StyleSheet } from 'react-native';
+import tmdb from '../api/tmdb';
 
 const DetailsScreen = ({ navigation }) => {
-  const [query, setQuery] = useState('');
-  const [movieResults, tvShowResults, fetchSearchResults] = useSearchResults();
+  const id = navigation.getParam('id');
+
+  const [details, setDetails] = useState(null);
+
+  useEffect(() => {
+    fetchDetails(id);
+  }, []);
+
+  const fetchDetails = async (id) => {
+    try {
+      const detailsResponse = await tmdb.get(`/movie/${id}`);
+      setDetails(detailsResponse.data);
+    } catch (error) {
+      // TODO : show some kind of toast.
+    }
+  };
+
+  if (!details) {
+    return null;
+  }
 
   return (
     <>
-      <Text>{navigation.getParam('id')}</Text>
+      <Text>{details.tagline}</Text>
     </>
   );
 };

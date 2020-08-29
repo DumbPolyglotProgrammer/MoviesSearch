@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import tmdb from '../api/tmdb';
 
 export default () => {
-  const [movieResults, setMovieResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     fetchSearchResults('Spider');
@@ -10,12 +10,12 @@ export default () => {
 
   const fetchSearchResults = async (query) => {
     try {
-      const movieResultsResponse = await tmdb.get('/search/movie', { params: { query } });
-      setMovieResults(movieResultsResponse.data.results);
+      const searchResultsResponse = await tmdb.get('/search/movie', { params: { query } });
+      setSearchResults(searchResultsResponse.data.results);
     } catch (error) {
       // TODO : show some kind of toast.
     }
   };
 
-  return [movieResults, fetchSearchResults];
+  return [searchResults, fetchSearchResults];
 };
