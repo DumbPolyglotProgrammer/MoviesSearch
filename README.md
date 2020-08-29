@@ -1,3 +1,16 @@
+### Configuration 
+
+1. Create a `.env` file at root of the project, and add your API key into it.
+```
+API_KEY=<YOUR_API_KEY>
+```
+2. Enjoy.
+```
+npm i && npm start
+```
+
+---
+
 `expo-cli`
 <br>
 Adds in a ton of default config to use features common in apps, like icons, video, better camera use, etc.
@@ -129,6 +142,3 @@ Run the function only when the component is first rendered, and when the 'value'
 
 https://reactnavigation.org/docs/4.x/with-navigation/
 
----
-
-...
