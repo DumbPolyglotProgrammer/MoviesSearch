@@ -122,3 +122,13 @@ useEffect(() => {}. [value])
 Run the function only when the component is first rendered, and when the 'value' changes.
 
 ---
+
+`withNavigation`
+
+`withNavigation` is a higher order component which passes the navigation prop into a wrapped component. It's useful when you cannot pass the navigation prop into the component directly, or don't want to pass it in case of a deeply nested child.
+
+https://reactnavigation.org/docs/4.x/with-navigation/
+
+---
+
+...

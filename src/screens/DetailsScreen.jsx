@@ -4,20 +4,17 @@ import SearchBar from '../components/SearchBar';
 import SearchResultsList from '../components/SearchResultsList';
 import useSearchResults from '../hooks/useSearchResults';
 
-const SearchScreen = () => {
+const DetailsScreen = ({ navigation }) => {
   const [query, setQuery] = useState('');
-  const [movieResults, fetchSearchResults] = useSearchResults();
+  const [movieResults, tvShowResults, fetchSearchResults] = useSearchResults();
 
   return (
     <>
-      <SearchBar onChangeText={(text) => setQuery(text)} text={query} onEndEditing={() => fetchSearchResults(query)} />
-      <ScrollView>
-        <SearchResultsList title='Movies' results={movieResults} />
-      </ScrollView>
+      <Text>{navigation.getParam('id')}</Text>
     </>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default SearchScreen;
+export default DetailsScreen;

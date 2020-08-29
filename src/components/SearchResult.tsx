@@ -14,9 +14,7 @@ const SearchResult = (props: SearchResultProps) => {
         }}
         style={styles.imageStyle}
       />
-      <Text style={styles.titleStyle}>
-        {props.result.title || props.result.name}
-      </Text>
+      <Text style={styles.titleStyle}>{props.result.title || props.result.name}</Text>
     </View>
   );
 };
